@@ -1,0 +1,30 @@
+<table class="table table-striped">
+  <thead>
+      <tr class="text-center">
+          <th scope="col"> # </th>
+          <th scope="col"> Move </th>
+          <th scope="col"> Type </th>
+          <th scope="col"> Base </th>
+          <th scope="col"> Power </th>
+          <th scope="col"> Pp </th>
+          <th scope="col"> Accuracy </th>
+          <th scope="col"> Effect </th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr class="align-middle animate__animated animate__fadeIn animate__faster text-center" *ngFor="let move of moves; let i = index">
+          <th *ngIf="move" scope="row">{{move.id}}</th>
+          <td *ngIf="move">{{move.name | titlecase}}</td>
+          <td *ngIf="move">
+            <button type="button" class="typeButton m-1 border-0" [class]="move.type.name">{{move.type.name | titlecase}}</button>
+          </td>
+          <td *ngIf="move">
+            <button type="button" class="typeButton m-1 border-0" [class]="move.damage_class.name">{{move.damage_class.name | titlecase}}</button>
+          </td>
+          <td *ngIf="move">{{move.power}}</td>
+          <td *ngIf="move">{{move.pp}}</td>
+          <td *ngIf="move">{{move.accuracy}}</td>
+          <td *ngIf="move" class="text-start">{{move.effect_entries[0].short_effect}}</td>
+      </tr>
+  </tbody>
+</table>

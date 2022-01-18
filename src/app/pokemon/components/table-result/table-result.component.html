@@ -1,0 +1,14 @@
+<div class="d-flex flex-wrap justify-content-md-between">
+    <div *ngFor="let pokemon of pokemons; let i = index" (click)="getPokemon(pokemon.id)">
+        <div class="card m-2" style="width: 18rem;" *ngIf="pokemon">
+            <img [src]="pokemon.sprites.front_default" class="card-img-top card-pokemon" alt="...">
+            <div class="card-body bg-light">
+              <p>N.º{{pokemon.id}}</p>
+              <h5 class="card-title">{{pokemon.name | titlecase}}</h5>
+              <div class="d-flex justify-content-start" >
+                <button type="button" class="typeButton m-1" [class]="type.type.name" *ngFor="let type of pokemon.types">{{type.type.name | titlecase}}</button>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

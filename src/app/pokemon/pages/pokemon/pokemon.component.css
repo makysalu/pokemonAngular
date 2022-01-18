@@ -1,0 +1,35 @@
+.caracters{
+  border-radius: 10px;
+}
+
+
+
+.card-pokemon{
+  background-color: #F2F2F2;
+  height: 288px;
+  width: 288px;
+}
+
+.content-page{
+  min-height: auto;
+}
+
+.btnLast{
+  border-left: 2px solid white;
+  background-color: gray;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 0px 0px 10px 100px;
+}
+
+.btnNext{
+  background-color: gray;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 0px 0px 100px 10px;
+}
+
+.btnNext:hover, .btnLast:hover{
+  background-color: rgb(103, 103, 160);
+  color: black;
+}

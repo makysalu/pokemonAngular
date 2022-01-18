@@ -1,0 +1,36 @@
+<form autocomplete="off" (submit)="changeSearch()">
+    <div class="row">
+        <div class="col-7">
+            <input type="text" name='term' class='form-control' placeholder="Search pokemons..." [(ngModel)]="term" (input)="textChange()">
+        </div>
+        <div class="col-2 d-grid gap-2">
+            <button class="btn btn-outline-secondary" (click)="showDivTypes()">Type</button>
+        </div>
+        <div class="col-3">
+            <select class="form-select" aria-label="Default select example" (change)="selectOrder()" [(ngModel)]="orderOption" name="orderCombo">
+                <option selected value="0">Ascending order </option>
+                <option value="1">Descending order</option>
+              </select>
+        </div>
+    </div>
+    <div class="p-3 col d-flex justify-content-center row" *ngIf="showTypes">
+        <button class="col-2 normal m-1 typeButton" (click)="selectType(1)" [class]="classTypeActive(1)">Normal</button>
+        <button class="col-2 fighting m-1 typeButton" (click)="selectType(2)" [class]="classTypeActive(2)">Fighting</button>
+        <button class="col-2flying m-1 typeButton" (click)="selectType(3)" [class]="classTypeActive(3)">Flying</button>
+        <button class="col-2 poison m-1 typeButton" (click)="selectType(4)" [class]="classTypeActive(4)">Poison</button>
+        <button class="col-2 ground m-1 typeButton" (click)="selectType(5)" [class]="classTypeActive(5)">Ground</button>
+        <button class="col-2 rock m-1 typeButton" (click)="selectType(6)" [class]="classTypeActive(6)">Rock</button>
+        <button class="col-2 bug m-1 typeButton" (click)="selectType(7)" [class]="classTypeActive(7)">Bug</button>
+        <button class="col-2 ghost m-1 typeButton" (click)="selectType(8)" [class]="classTypeActive(8)">Gosht</button>
+        <button class="col-2 steel m-1 typeButton" (click)="selectType(9)" [class]="classTypeActive(9)">Steel</button>
+        <button class="col-2 fire m-1 typeButton" (click)="selectType(10)" [class]="classTypeActive(10)">Fire</button>
+        <button class="col-2 water m-1 typeButton" (click)="selectType(11)" [class]="classTypeActive(11)">Water</button>
+        <button class="col-2 grass m-1 typeButton" (click)="selectType(12)" [class]="classTypeActive(12)">Grass</button>
+        <button class="col-2 electric m-1 typeButton" (click)="selectType(13)" [class]="classTypeActive(13)">Electric</button>
+        <button class="col-2 psychic m-1 typeButton" (click)="selectType(14)" [class]="classTypeActive(14)">Pychic</button>
+        <button class="col-2 ice m-1 typeButton" (click)="selectType(15)" [class]="classTypeActive(15)">Ice</button>
+        <button class="col-2 dragon m-1 typeButton" (click)="selectType(16)" [class]="classTypeActive(16)">Dragon</button>
+        <button class="col-2 dark m-1 typeButton" (click)="selectType(17)" [class]="classTypeActive(17)">Dark</button>
+        <button class="col-2 fairy m-1 typeButton" (click)="selectType(18)"  [class]="classTypeActive(18)">Fairy</button>
+    </div>
+</form>

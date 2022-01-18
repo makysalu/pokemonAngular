@@ -1,0 +1,15 @@
+.sizeName{
+    width: 15%;
+  }
+
+.status{
+  background-color: rgb(80, 143, 17);
+}
+
+.physical{
+  background-color: #FF4400;
+}
+
+.special{
+  background-color: #2266CC;
+}

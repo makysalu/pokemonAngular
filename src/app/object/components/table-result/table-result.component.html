@@ -1,0 +1,24 @@
+<table class="table table-striped">
+    <thead>
+        <tr class="text-center">
+            <th scope="col"> # </th>
+            <th scope="col"> Object </th>
+            <th scope="col"> Effect </th>
+            <th scope="col"> Cost </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="align-middle animate__animated animate__fadeIn animate__faster text-center" *ngFor="let object of objects; let i = index">
+            <th *ngIf="object" scope="row">
+                <img [src]="object.sprites.default" class="item" alt="Object Image">
+            </th>
+            <td *ngIf="object">{{object.name | titlecase}}</td>
+            <td class="text-start" *ngIf="(object && object.effect_entries.length>0 && object.effect_entries[0].short_effect); else efectRef">{{object.effect_entries[0].short_effect}}</td>
+            <ng-template #efectRef>
+                <td class="text-start"></td>
+            </ng-template>
+            <td *ngIf="object">{{object.cost}}$</td>
+        </tr>
+    </tbody>
+  </table>
+  

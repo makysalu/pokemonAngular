@@ -1,0 +1,11 @@
+.card-pokemon{
+    background-color: #F2F2F2;
+}
+
+.card-body{
+    padding: 0 10px;
+}
+
+.card{
+    border: none;
+}

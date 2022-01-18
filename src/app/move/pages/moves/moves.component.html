@@ -1,0 +1,46 @@
+<div class="animate__animated animate__fadeIn animate__faster">
+  <div class="tittle row p-4 text-white">
+    <h2 class="">Moves</h2>
+  </div>
+
+  <div class="row p-4 form-search">
+    <div class="col">
+      <app-form-search (search)="searchMove($event)" (type)="selectMovesByType($event)" (order)="changeOrder($event)" (onDebounce)="suggestions($event)"></app-form-search>
+      <ul class="list-group" *ngIf="movesListCopy.length > 0">
+        <li class="list-group-item list-group-item-action" *ngFor="let move of movesListCopy"> 
+            <a class="nav-link text-dark">{{move.name}}</a>
+        </li>
+      </ul>
+      <div *ngIf="error" class="alert alert-danger">
+        Nothing was found with term {{ term }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row p-4 content-page">
+    <div class="col-12">
+      <app-table-result
+        *ngIf="moves.length > 0"
+        [moves]="moves"
+      ></app-table-result>
+    </div>
+  </div>
+
+  <div class="col d-flex  flex-row  justify-content-end">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link text-dark" (click)="paginationMoves(-1)">Previous</a></li>
+        <li class="page-item"><a class="page-link active text-dark" (click)="paginationMoves(-2)" *ngIf="page-2>0">{{page-2}}</a></li>
+        <li class="page-item"><a class="page-link active text-dark" *ngIf="page-2<=0">...</a></li>
+        <li class="page-item"><a class="page-link active text-dark" (click)="paginationMoves(-1)" *ngIf="page-1>0">{{page-1}}</a></li>
+        <li class="page-item"><a class="page-link active text-dark" *ngIf="page-1<=0">...</a></li>
+        <li class="page-item"><a class="page-link text-dark">{{page}}</a></li>
+        <li class="page-item"><a class="page-link text-dark" (click)="paginationMoves(1)" *ngIf="page+1<pagemax">{{page+1}}</a></li>
+        <li class="page-item"><a class="page-link active text-dark" *ngIf="page+1>pagemax">...</a></li>
+        <li class="page-item"><a class="page-link text-dark" (click)="paginationMoves(2)" *ngIf="page+2<pagemax">{{page+2}}</a></li>
+        <li class="page-item"><a class="page-link active text-dark" *ngIf="page+2>pagemax">...</a></li>
+        <li class="page-item"><a class="page-link text-dark" (click)="paginationMoves(1)">Next</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<form autocomplete="off" (submit)="changeSearch()">
+    <div class="row">
+        <div class="col-9">
+            <input type="text" name='term' class='form-control' placeholder="Search objects..." [(ngModel)]="term" (input)="textChange()">
+        </div>
+        <div class="col-3">
+            <select class="form-select" aria-label="Default select example" (change)="selectOrder()" [(ngModel)]="orderOption" name="orderCombo">
+                <option selected value = '0'>Ascending order </option>
+                <option value="1">Descending order</option>
+              </select>
+        </div>
+    </div>
+</form>

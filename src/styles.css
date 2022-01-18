@@ -1,0 +1,106 @@
+/* You can add global styles to this file, and also import other style files */
+html, body{
+    /*margin: 0;
+    padding: 0;*/
+    /*background-color: #E3350D*/
+    min-height: 100vh;
+    background-color: white;
+}
+
+.main{
+    min-height: 100vh;
+}
+
+
+.sidebar{
+    min-height: 100vh;
+    background-color: #E3350D;
+}
+
+.content-page{
+    min-height: 70vh;
+}
+
+
+.normal{
+    background-color: #A8A878;
+}
+
+.fighting{
+    background-color: #C02038;
+}
+
+.flying{
+    background-color: #A890F0;
+}
+
+.poison{
+    background-color: #A040A0;
+}
+
+.ground{
+    background-color: #E0C068;
+}
+
+.rock{
+    background-color: #B8A038;
+}
+
+.bug{
+    background-color: #A8B820;
+}
+
+.ghost{
+    background-color: #705898;
+}
+
+.steel{
+    background-color: #B8B8D0;
+}
+
+.fire{
+    background-color: #F08030;
+}
+
+.water{
+    background-color: #6890F0;
+}
+
+.grass{
+    background-color: #78C850;
+}
+
+.electric{
+    background-color: #F8D030;
+}
+
+.psychic{
+    background-color: #F85888;
+}
+
+.ice{
+    background-color: #98D8D8;
+}
+
+.dragon{
+    background-color: #7038F8;
+}
+
+.dark{
+    background-color: #705848;
+}
+
+.fairy{
+    background-color: #EE99AC;
+}
+
+.typeButton{
+    width: 80px;
+    border: 3px solid white;
+    border-radius: 3px;
+    color: white    ;
+}
+
+.tittle{
+    background-color: #313131;
+}
